@@ -1,0 +1,35 @@
+#!name = Gemini 分流
+#!desc = Gemini 网页版 / Google AI Studio / Gemini API 流量分流到代理。规则统一走 PROXY，订阅后请在 Loon 插件设置中把 PROXY 映射到你想要的策略组（如“人工智能”“国际媒体”或指定节点）。
+#!author = Doubao（域名来源：blackmatrix7/ios_rule_script 的 Gemini.list，并补充 aistudio.google.com）
+#!homepage = 
+#!icon = 
+#!system = iOS, iPadOS, macOS
+#!system_version = 
+#!loon_version = 
+#!tag = 分流, Gemini, Google
+#!date = 2026-10-17
+
+[Rule]
+# ---- 主站（网页版）----
+# Gemini 网页版
+DOMAIN-SUFFIX,gemini.google.com,PROXY
+# Google AI Studio（补充域名：blackmatrix7 列表未含，多个来源确认需代理）
+DOMAIN,aistudio.google.com,PROXY
+# 旧 Bard 域名
+DOMAIN-SUFFIX,bard.google.com,PROXY
+# ---- 开发者 / API ----
+DOMAIN,ai.google.dev,PROXY
+DOMAIN,makersuite.google.com,PROXY
+DOMAIN,alkalimakersuite-pa.clients6.google.com,PROXY
+# Gemini API（覆盖 generativelanguage.googleapis.com 等，关键词匹配）
+DOMAIN-KEYWORD,generativelanguage,PROXY
+# ---- 生态与基础设施 ----
+DOMAIN-SUFFIX,deepmind.com,PROXY
+DOMAIN-SUFFIX,deepmind.google,PROXY
+DOMAIN-SUFFIX,generativeai.google,PROXY
+DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com,PROXY
+# Google API 基础设施（blackmatrix7 规则原样保留；会让所有 apis.google.com 也走代理，不需要可删）
+DOMAIN-SUFFIX,apis.google.com,PROXY
+# Colab / 开发者配置（关键词兜底）
+DOMAIN-KEYWORD,colab,PROXY
+DOMAIN-KEYWORD,developerprofiles,PROXY
