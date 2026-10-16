@@ -1,0 +1,18 @@
+# NAME: Gemini
+# DESC: Gemini / AI Studio / Gemini API 分流规则（纯规则列表，每行一条 Loon 规则语法）
+# SOURCE: blackmatrix7/ios_rule_script Gemini.list + aistudio.google.com 补充
+# 订阅方式（主配置 [Rule] 中添加）：https://raw.githubusercontent.com/Xiantouzi/Loon-Gemini-Rules/main/Gemini.lsr,PROXY
+DOMAIN-SUFFIX,gemini.google.com,PROXY
+DOMAIN,aistudio.google.com,PROXY
+DOMAIN-SUFFIX,bard.google.com,PROXY
+DOMAIN,ai.google.dev,PROXY
+DOMAIN,makersuite.google.com,PROXY
+DOMAIN,alkalimakersuite-pa.clients6.google.com,PROXY
+DOMAIN-KEYWORD,generativelanguage,PROXY
+DOMAIN-SUFFIX,deepmind.com,PROXY
+DOMAIN-SUFFIX,deepmind.google,PROXY
+DOMAIN-SUFFIX,generativeai.google,PROXY
+DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com,PROXY
+DOMAIN-SUFFIX,apis.google.com,PROXY
+DOMAIN-KEYWORD,colab,PROXY
+DOMAIN-KEYWORD,developerprofiles,PROXY
